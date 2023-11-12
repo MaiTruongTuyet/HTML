@@ -82,3 +82,110 @@
     </div>
 </body>
 </html>
+--BAI 58
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neonatal Feeding Study </title>
+    <script src="Bai_58.js" async></script>
+    <link rel="stylesheet" href="Bai_58.css">
+    
+</head>
+<header>
+    <img src="./hinh/Logo.gif" alt="hinh anh khong ton tai" >
+    <h1>Neonatal Feeding Study</h1>
+</header>
+<body onload="auto()">
+    <div class ="form__container" id="form__study">
+        <form action="#"> 
+            <div class ="form--row" id="row--right">
+                <label>Today is: </label>
+                <span id="dateTime"></span>
+            </div>
+            <div class ="form--row">
+                <label class=" form__label">1) Name ( first, last): </label>
+                <input class="form__input" type="text">
+                <input class="form__input"type="text">
+            </div>
+            <div class ="form--row">
+                <label class=" form__label">2) Medical Record # </label>
+                <input id="input_5" type="text">
+            </div>
+            <div class ="form--row">
+                <label class=" form__label">3) Date of birth </label>
+                <input id="input_5" type="date">
+            </div>
+            <div class ="form--row">
+                <label class=" form__label">4) Physician </label>
+                <select name="Cat4" id="CG4" >
+                    <option value="Warren " > Dr.Warren Albert</option>
+                    <option value="Maria"> Dr. Maria Alvarez</option>
+                    <option value="Karen"> Dr. Karen Brinkman</option>
+                    <option value="Michael"> Dr. Michael Kerry</option>
+                </select>
+            </div>
+            <div class ="form--row">
+                <label class=" form__label" id ="text_1">If other (specify) </label>
+                <input class="form__input"  type="text">
+            
+            </div>
+            <div class ="form--row">
+                <label >5) 1 Minute APGAR Score <br><p id ="text_1" >Each score must be 0,1 or 2 </p></label>
+                <table>
+                    <tr >
+                        <td><label>Activity</label></td>
+                        <td><input class="input_2" id ="score1" type="number" onchange="score()"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Pulse</label></td>
+                        <td><input class="input_2" id ="score2" type="number" onchange="score()"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Grimace (Reflex, Irritability)</label></td>
+                        <td><input class="input_2" id ="score3" type="number" onchange="score()"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Appearance ( Skin Color)</label></td>
+                        <td><input class="input_2" id ="score4" type="number" onchange="score()"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Respiration</label></td>
+                        <td><input class="input_2" id ="score5" type="number"onchange="score()"> </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>TOTAL</label></td>
+                        <td><input class="input_3" id="total" type="number" onchange="score()"></td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class ="form--row">
+                <label class=" form__label" >6) Birth weight (gms)</label> 
+                <input id="input_1"type="text">
+              
+            </div>
+            <div class ="form--row">
+                <label class=" form__label" id ="text_1" >Weights must be >= 1200 gms</label> 
+            </div>    
+
+            <div class ="form--row">
+                <label class=" form__label">7) Parental Consent (required) </label>
+                <input type="checkbox">
+            </div>
+
+            <div class ="form--row" id="row--width">
+                <button >Register</button>
+                <button>Reload Page</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
