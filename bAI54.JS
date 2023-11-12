@@ -1,3 +1,4 @@
+--BAI_54
 function calculate_Max() {
     const num1 = parseFloat(document.getElementById("number1").value);
     const num2 = parseFloat(document.getElementById("number2").value);
@@ -40,3 +41,32 @@ function calculate_ab() {
     const powValue = Math.pow(num1, num2);
 
     document.getElementById("result").textContent = ` ${powValue}`;}
+
+-- BAI_55
+function solveQuadratic() {
+    const a = parseFloat(document.getElementById("numbera").value);
+    const b = parseFloat(document.getElementById("numberb").value);
+    const c = parseFloat(document.getElementById("numberc").value);
+    const discriminant = b * b - 4 * a * c;
+    
+    if (discriminant > 0) {
+        // Trường hợp hai nghiệm phân biệt
+        const x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+        const x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+        document.getElementById("result").textContent = `Có hai nghiệm x1 ${x1} và x2 ${x2}`;
+        return [x1, x2];
+       
+    } else if (discriminant === 0) {
+        // Một nghiệm kép
+        const x = -b / (2 * a);
+        document.getElementById("result").textContent = `Có 1 nghiệm kép x1=x2=${x}`;
+        return [x];
+    } else {
+        // Không có nghiệm thực
+        document.getElementById("result").textContent = `Không có nghiệm`;
+        return [];
+    }
+}
+function reloadPage() {
+    location.reload();
+}
