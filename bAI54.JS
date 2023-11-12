@@ -70,3 +70,26 @@ function solveQuadratic() {
 function reloadPage() {
     location.reload();
 }
+
+--BAI58
+function score(){
+    let A = document.getElementById("score1").value;
+    let P = document.getElementById("score2").value;
+    let G = document.getElementById("score3").value;
+    let AP = document.getElementById("score4").value;
+    let R = document.getElementById("score5").value;
+    let arr = [A,P,G,AP,R];
+    for (let i = 0; i < arr.length; i++) {
+        let kq = arr[i];
+        if (kq < 0 || kq > 2) {
+            alert('Vui lòng nhập trong khoảng từ 0 đến 2');
+            return false; 
+        }}
+
+    }
+function auto() {
+    let today = new Date();
+    let month = today.getMonth() + 1;
+    let date = today.getDate() + '/' + month + '/' + today.getFullYear();
+    document.getElementById("dateTime").innerHTML = date;
+    }
